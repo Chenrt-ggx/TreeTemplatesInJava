@@ -17,7 +17,5 @@ jobs:
                   distribution: "temurin"
             - name: compile
               run: find . -name '*.java' | xargs javac
-            - name: pack
-              run: find . -name '*.class' | xargs jar cvmf META-INF/MANIFEST.MF TreeTemplatesInJava.jar
             - name: test
-              run: java -jar TreeTemplatesInJava.jar -Local
+              run: java Main -Local
